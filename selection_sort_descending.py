@@ -18,6 +18,3 @@ print(arr)
 print("By descending order:")
 new_arr = selection_sort(arr)
 print(new_arr)
-
-
-new_arr = []

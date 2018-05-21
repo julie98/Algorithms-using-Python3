@@ -1,20 +1,20 @@
-def binary_search(list, item):
+def binary_search(arr, target):
 	low = 0
-	high = len(list) - 1
+	high = len(arr) - 1
+	
 	while low <= high:
-		mid = int((low + high) / 2)
-		guess = list[mid]
-		if guess == item:
+		mid = (low + high) // 2
+		if arr[mid] == target:
 			return mid
-		elif guess < item:
-			low = mid + 1		
+		elif arr[mid] < target:
+			low = mid + 1
 		else:
 			high = mid -1
 	return None
 
-my_list = [1, 3, 5, 7, 9]
-index = binary_search(my_list, 3)
-print(index)
+arr = [2, 3, 6, 8, 11, 15, 17]
+print(binary_search(arr, 5))
+print(binary_search(arr, 11))
 
-index = binary_search(my_list, 12)
-print(index)
+arr = [1, 2, 3, 4, 5, 6]
+print(binary_search(arr, 8))
